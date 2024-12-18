@@ -18,7 +18,7 @@ spring:
     host: redis-cache-1
 #    port: 6380
     port: 6379
-    
+
 eureka:
   client:
     service-url:
