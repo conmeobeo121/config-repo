@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://mysql-user-master:3307/quizcard_db_user
+    url: jdbc:mysql://mysql-user-master:3306/quizcard_db_user
     username: admin
     password: adminpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
