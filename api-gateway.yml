@@ -1,0 +1,28 @@
+# config-repo/api-gateway.yml
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      uri: http://config-server:8888
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://UserService
+          predicates:
+            - Path=/api/v1/users/**
+          filters:
+            - StripPrefix=2
+
+  redis:
+    host: redis-cache-1
+    port: 6380
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
