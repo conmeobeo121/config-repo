@@ -1,4 +1,7 @@
 # config-repo/user-service.yml
+server:
+  port: 8081
+
 spring:
   datasource:
     url: jdbc:mysql://mysql-user-master:3307/quizcard_db_user
