@@ -14,6 +14,12 @@ spring:
             - Path=/api/v1/users/**
 #          filters:
 #            - StripPrefix=2
+        - id: set-service
+          uri: lb://SetService
+          predicates:
+            - Path=/api/v1/set/**
+    #      filters:
+    #        - StripPrefix=2
 
   redis:
     host: redis-cache-1
