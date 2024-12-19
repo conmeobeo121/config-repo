@@ -18,6 +18,10 @@ spring:
           uri: lb://SetService
           predicates:
             - Path=/api/v1/set/**
+        - id: flashcard-service
+          uri: lb://FlashcardService
+          predicates:
+            - Path=/api/v1/card/**
     #      filters:
     #        - StripPrefix=2
 
